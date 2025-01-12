@@ -18,6 +18,8 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 12. [IIFE - Expressão de Função Invocada Imediatamente](#iife---expressão-de-função-invocada-imediatamente)
 13. [Strict Mode](#strict-mode)
 14. [Closures](#closures)
+15. [Housing](#housing)
+16. [Arguments](#arguments)
 
 ---
 
@@ -266,7 +268,7 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 ## Closures
 
 - Definição:
-  Uma closure ocorre quando uma função acessa variáveis fora de seu escopo.
+  Uma closure ocorre normalmente quando uma função é declarada dentro do corpo de outra e acessa variáveis do escopo externo.
 
 - Exemplo:
   ```javascript
@@ -282,3 +284,33 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
   const contador = criarContador();
   console.log(contador()); // 1
   console.log(contador()); // 2
+  ```
+
+---
+
+## Housing
+
+- Comentário sobre código:
+  ```javascript
+  //housing: Este é um exemplo de comentário no código explicando sua funcionalidade.
+  ```
+
+---
+
+## Arguments
+
+- Definição:
+  `arguments` é um objeto semelhante a um array disponível dentro de funções tradicionais, que contém os valores dos parâmetros passados para a função.
+
+- Exemplo:
+  ```javascript
+  function somaTudo() {
+    let total = 0;
+    for (let i = 0; i < arguments.length; i++) {
+      total += arguments[i];
+    }
+    return total;
+  }
+
+  console.log(somaTudo(1, 2, 3, 4)); // 10
+  

@@ -288,12 +288,9 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 
 ---
 
-## Housing
+## Hoisting
 
-- Comentário sobre código:
-  ```javascript
-  //housing: Este é um exemplo de comentário no código explicando sua funcionalidade.
-  ```
+- **Definição:** O *hoisting* (elevação) é um comportamento do JavaScript no qual declarações de variáveis e funções são movidas para o topo do escopo durante a execução. Isso significa que você pode usar uma variável ou função antes de declará-la no código.
 
 ---
 

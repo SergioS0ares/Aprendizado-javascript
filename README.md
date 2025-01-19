@@ -361,7 +361,10 @@ console.log(Tenis.tipo);
 console.log(Tenis.tamanho);
 ```
 
-### Propriedade, Métodos e Valores Curtos
+### Propriedades, Métodos e Valores Curtos
+Este tópico aborda como objetos podem ser estruturados de forma concisa, utilizando nomes de variáveis como valores de propriedades diretamente, além de métodos simplificados para declarar funções dentro de objetos.
+
+Exemplo:
 ```javascript
 function Tenis(t, estoque, preco) {
     return { tamanho: t, estoque, preco };
@@ -384,6 +387,9 @@ console.log(Tenis3.getTamanho());
 ```
 
 ### Acessando Valores do Objeto
+Demonstra como acessar os valores de propriedades de um objeto utilizando a notação de ponto (`obj.propriedade`) e a notação de colchetes (`obj['propriedade']`).
+
+Exemplo:
 ```javascript
 const Tenis = { tamanho: 45, marca: "Nike" };
 console.log(Tenis.marca);
@@ -391,6 +397,9 @@ console.log(Tenis.tamanho);
 ```
 
 ### Destructuring
+Explica como extrair valores de propriedades de um objeto diretamente em variáveis usando a técnica de destructuring. Também aborda como definir valores padrão caso a propriedade não exista no objeto.
+
+Exemplo:
 ```javascript
 const Tenis = {
     tamanho: 45,
@@ -406,6 +415,9 @@ console.log(tamanho, estoque, marcas);
 ```
 
 ### Verificando a Existência de Propriedade
+Mostra como verificar se uma propriedade existe em um objeto utilizando métodos como `hasOwnProperty` e o operador `in`.
+
+Exemplo:
 ```javascript
 const Tenis = { tamanho: 45, estoque: true };
 console.log(Tenis.hasOwnProperty("tamanho"));
@@ -413,6 +425,9 @@ if ("tamanho" in Tenis) console.log("Existe tamanho");
 ```
 
 ### Adicionando e Atualizando Dados do Objeto
+Explica como adicionar novas propriedades a um objeto ou atualizar valores de propriedades existentes usando a notação de ponto ou de colchetes.
+
+Exemplo:
 ```javascript
 let Tenis = { tamanho: 45, estoque: true };
 Tenis.tamanho = 42;
@@ -421,6 +436,9 @@ console.log(Tenis);
 ```
 
 ### Removendo a Propriedade do Objeto
+Descreve como remover propriedades de um objeto utilizando o operador `delete` e as implicações dessa operação no objeto.
+
+Exemplo:
 ```javascript
 let Tenis = { tamanho: 45, estoque: true };
 delete Tenis.estoque;
@@ -428,6 +446,9 @@ console.log(Tenis);
 ```
 
 ### Mesclando e Clonando Objetos
+Aborda como combinar dois ou mais objetos em um único objeto utilizando `Object.assign` e o operador spread (`...`). Também introduz práticas para criar cópias rasas de objetos.
+
+Exemplo:
 ```javascript
 let Tenis = { tamanho: 45, estoque: true };
 let link = { link: { a: "a", b: { c: "c" } } };
@@ -439,6 +460,9 @@ console.log(mesclar2);
 ```
 
 ### Clonagem de Objetos Rasos e Profundos
+Diferencia a clonagem rasa e profunda de objetos. A clonagem rasa copia apenas o nível superior de propriedades, enquanto a profunda copia todos os níveis. Técnicas como `JSON.parse(JSON.stringify(obj))` e bibliotecas especializadas são mencionadas para clonagem profunda.
+
+Exemplo:
 ```javascript
 let Tenis = { tamanho: 45, estoque: true };
 let link = { link: { a: "a", b: { c: "c" } } };

@@ -417,7 +417,7 @@ console.log(tamanho, estoque, marcas);
 ### Verificando a Existência de Propriedade
 - Mostra como verificar se uma propriedade existe em um objeto utilizando métodos como `hasOwnProperty` e o operador `in`.
 
-Exemplo:
+- Exemplo:
 ```javascript
 const Tenis = { tamanho: 45, estoque: true };
 console.log(Tenis.hasOwnProperty("tamanho"));
@@ -479,3 +479,4 @@ console.log(clone1);
 console.log(mesclar1);
 console.log(mesclar2);
 ```
+---

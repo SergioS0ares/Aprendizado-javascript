@@ -29,6 +29,10 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 23. [Removendo a Propriedade do Objeto](#removendo-a-propriedade-do-objeto)  
 24. [Mesclando e Clonando Objetos](#mesclando-e-clonando-objetos)  
 25. [Clonagem de Objetos Rasos e Profundos](#clonagem-de-objetos-rasos-e-profundos)
+26. [O que é um Array](#o-que-é-um-array)
+27. [Índices e Elementos](#índices-e-elementos)
+28. [Matrizes Multidimensionais](#matrizes-multidimensionais)
+29. [Destructuring Array](#destructuring-array)
 
 
 ---
@@ -481,3 +485,4 @@ console.log(mesclar1);
 console.log(mesclar2);
 ```
 ---
+

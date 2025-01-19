@@ -20,6 +20,16 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 14. [Closures](#closures)
 15. [Housing](#housing)
 16. [Arguments](#arguments)
+17. [O que é um Objeto](#o-que-é-um-objeto)  
+18. [Propriedades, Métodos e Valores Curtos](#propriedades-métodos-e-valores-curtos)  
+19. [Acessando Valores do Objeto](#acessando-valores-do-objeto)  
+20. [Destructuring](#destructuring)  
+21. [Verificando a Existência de Propriedades](#verificando-a-existência-de-propriedades)  
+22. [Adicionando e Atualizando Propriedades no Objeto](#adicionando-e-atualizando-propriedades-no-objeto)  
+23. [Removendo a Propriedade do Objeto](#removendo-a-propriedade-do-objeto)  
+24. [Mesclando e Clonando Objetos](#mesclando-e-clonando-objetos)  
+25. [Clonagem de Objetos Rasos e Profundos](#clonagem-de-objetos-rasos-e-profundos)
+
 
 ---
 
@@ -209,7 +219,7 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 - Retorno de função:
   ```javascript
   function retornaNome() {
-    return "Dener Troquatte";
+    return "Sérgio";
   }
 
   console.log(retornaNome());
@@ -311,3 +321,137 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 
   console.log(somaTudo(1, 2, 3, 4)); // 10
   
+## Objetos em JavaScript
+
+### O que é um Objeto?
+Objetos são coleções de propriedades, onde cada propriedade possui uma chave e um valor. 
+Elas podem ser acessadas e manipuladas dinamicamente.
+
+Exemplo:
+```javascript
+let Tenis = {
+    tipo: "Tenis de Corrida",
+    cardaco: "G",
+    estoque: false,
+    tamanho: {
+      palmilha: 39,
+      tenis: 40,
+      caixa: {
+        altura: 35,
+        largura: 40,
+        profunidade: 10,
+      },
+    },
+    marcaArrayValores: ["Nike", "Adidas", "etc"],
+    marcaArrayObj: [
+      { nome: "Nike" },
+      { nome: "Adidas" },
+      { nome: "etc" },
+    ],
+    getMarcaArrayValores: function (param) {
+      return this.marcaArrayObj[param];
+    },
+    getMarcaArrayObj: function (param) {
+      return this.marcaArrayObj[param].nome;
+    },
+  };
+
+console.log(Tenis);
+console.log(Tenis.tipo);
+console.log(Tenis.tamanho);
+```
+
+### Propriedade, Métodos e Valores Curtos
+```javascript
+function Tenis(t, estoque, preco) {
+    return { tamanho: t, estoque, preco };
+}
+console.log(Tenis(35, true, "R$ 35"));
+
+const tamanho = 35;
+const estoque = true;
+const preco = "R$ 35";
+
+const Tenis2 = { tamanho, estoque, preco };
+console.log(Tenis2);
+
+const Tenis3 = {
+    getTamanho() {
+        return 35;
+    },
+};
+console.log(Tenis3.getTamanho());
+```
+
+### Acessando Valores do Objeto
+```javascript
+const Tenis = { tamanho: 45, marca: "Nike" };
+console.log(Tenis.marca);
+console.log(Tenis.tamanho);
+```
+
+### Destructuring
+```javascript
+const Tenis = {
+    tamanho: 45,
+    estoque: true,
+    marcas: [{ nome: "Nike" }, { nome: "Adidas" }],
+    secret: 123456,
+    n: 5,
+    link: { a: "a é = a", b: { c: "C é = c" } },
+};
+
+const { tamanho, estoque, marcas = "Não possui Marca alguma!" } = Tenis;
+console.log(tamanho, estoque, marcas);
+```
+
+### Verificando a Existência de Propriedade
+```javascript
+const Tenis = { tamanho: 45, estoque: true };
+console.log(Tenis.hasOwnProperty("tamanho"));
+if ("tamanho" in Tenis) console.log("Existe tamanho");
+```
+
+### Adicionando e Atualizando Dados do Objeto
+```javascript
+let Tenis = { tamanho: 45, estoque: true };
+Tenis.tamanho = 42;
+Tenis["preco"] = "R$ 42";
+console.log(Tenis);
+```
+
+### Removendo a Propriedade do Objeto
+```javascript
+let Tenis = { tamanho: 45, estoque: true };
+delete Tenis.estoque;
+console.log(Tenis);
+```
+
+### Mesclando e Clonando Objetos
+```javascript
+let Tenis = { tamanho: 45, estoque: true };
+let link = { link: { a: "a", b: { c: "c" } } };
+
+let mesclar1 = Object.assign(Tenis, link);
+let mesclar2 = { ...Tenis, ...link };
+console.log(mesclar1);
+console.log(mesclar2);
+```
+
+### Clonagem de Objetos Rasos e Profundos
+```javascript
+let Tenis = { tamanho: 45, estoque: true };
+let link = { link: { a: "a", b: { c: "c" } } };
+
+function cloneObject(objc) {
+    return JSON.parse(JSON.stringify(objc));
+}
+
+let clone1 = cloneObject(Tenis);
+let mesclar1 = Object.assign(cloneObject(Tenis), cloneObject(link));
+let mesclar2 = { ...cloneObject(Tenis), ...cloneObject(link) };
+
+console.log(clone1);
+console.log(mesclar1);
+console.log(mesclar2);
+```

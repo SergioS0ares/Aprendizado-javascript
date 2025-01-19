@@ -11,7 +11,7 @@ const Tenis = {
   console.log(tamanho, estoque, marcas);
   
   const { secret: randomNumber, n: avaliacoes } = Tenis;
-  console.log(secret);
+  //console.log(secret);
   console.log(randomNumber);
   console.log(avaliacoes);
   

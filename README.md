@@ -324,10 +324,10 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 ## Objetos em JavaScript
 
 ### O que é um Objeto?
-Objetos são coleções de propriedades, onde cada propriedade possui uma chave e um valor. 
+- Objetos são coleções de propriedades, onde cada propriedade possui uma chave e um valor. 
 Elas podem ser acessadas e manipuladas dinamicamente.
 
-Exemplo:
+- Exemplo:
 ```javascript
 let Tenis = {
     tipo: "Tenis de Corrida",
@@ -362,9 +362,9 @@ console.log(Tenis.tamanho);
 ```
 
 ### Propriedades, Métodos e Valores Curtos
-Este tópico aborda como objetos podem ser estruturados de forma concisa, utilizando nomes de variáveis como valores de propriedades diretamente, além de métodos simplificados para declarar funções dentro de objetos.
+- Este tópico aborda como objetos podem ser estruturados de forma concisa, utilizando nomes de variáveis como valores de propriedades diretamente, além de métodos simplificados para declarar funções dentro de objetos.
 
-Exemplo:
+- Exemplo:
 ```javascript
 function Tenis(t, estoque, preco) {
     return { tamanho: t, estoque, preco };
@@ -387,9 +387,9 @@ console.log(Tenis3.getTamanho());
 ```
 
 ### Acessando Valores do Objeto
-Demonstra como acessar os valores de propriedades de um objeto utilizando a notação de ponto (`obj.propriedade`) e a notação de colchetes (`obj['propriedade']`).
+- Demonstra como acessar os valores de propriedades de um objeto utilizando a notação de ponto (`obj.propriedade`) e a notação de colchetes (`obj['propriedade']`).
 
-Exemplo:
+- Exemplo:
 ```javascript
 const Tenis = { tamanho: 45, marca: "Nike" };
 console.log(Tenis.marca);
@@ -397,9 +397,9 @@ console.log(Tenis.tamanho);
 ```
 
 ### Destructuring
-Explica como extrair valores de propriedades de um objeto diretamente em variáveis usando a técnica de destructuring. Também aborda como definir valores padrão caso a propriedade não exista no objeto.
+- Explica como extrair valores de propriedades de um objeto diretamente em variáveis usando a técnica de destructuring. Também aborda como definir valores padrão caso a propriedade não exista no objeto.
 
-Exemplo:
+- Exemplo:
 ```javascript
 const Tenis = {
     tamanho: 45,
@@ -415,7 +415,7 @@ console.log(tamanho, estoque, marcas);
 ```
 
 ### Verificando a Existência de Propriedade
-Mostra como verificar se uma propriedade existe em um objeto utilizando métodos como `hasOwnProperty` e o operador `in`.
+- Mostra como verificar se uma propriedade existe em um objeto utilizando métodos como `hasOwnProperty` e o operador `in`.
 
 Exemplo:
 ```javascript
@@ -425,9 +425,9 @@ if ("tamanho" in Tenis) console.log("Existe tamanho");
 ```
 
 ### Adicionando e Atualizando Dados do Objeto
-Explica como adicionar novas propriedades a um objeto ou atualizar valores de propriedades existentes usando a notação de ponto ou de colchetes.
+- Explica como adicionar novas propriedades a um objeto ou atualizar valores de propriedades existentes usando a notação de ponto ou de colchetes.
 
-Exemplo:
+- Exemplo:
 ```javascript
 let Tenis = { tamanho: 45, estoque: true };
 Tenis.tamanho = 42;
@@ -436,9 +436,9 @@ console.log(Tenis);
 ```
 
 ### Removendo a Propriedade do Objeto
-Descreve como remover propriedades de um objeto utilizando o operador `delete` e as implicações dessa operação no objeto.
+- Descreve como remover propriedades de um objeto utilizando o operador `delete` e as implicações dessa operação no objeto.
 
-Exemplo:
+- Exemplo:
 ```javascript
 let Tenis = { tamanho: 45, estoque: true };
 delete Tenis.estoque;
@@ -446,9 +446,9 @@ console.log(Tenis);
 ```
 
 ### Mesclando e Clonando Objetos
-Aborda como combinar dois ou mais objetos em um único objeto utilizando `Object.assign` e o operador spread (`...`). Também introduz práticas para criar cópias rasas de objetos.
+- Aborda como combinar dois ou mais objetos em um único objeto utilizando `Object.assign` e o operador spread (`...`). Também introduz práticas para criar cópias rasas de objetos.
 
-Exemplo:
+- Exemplo:
 ```javascript
 let Tenis = { tamanho: 45, estoque: true };
 let link = { link: { a: "a", b: { c: "c" } } };
@@ -460,9 +460,9 @@ console.log(mesclar2);
 ```
 
 ### Clonagem de Objetos Rasos e Profundos
-Diferencia a clonagem rasa e profunda de objetos. A clonagem rasa copia apenas o nível superior de propriedades, enquanto a profunda copia todos os níveis. Técnicas como `JSON.parse(JSON.stringify(obj))` e bibliotecas especializadas são mencionadas para clonagem profunda.
+- Diferencia a clonagem rasa e profunda de objetos. A clonagem rasa copia apenas o nível superior de propriedades, enquanto a profunda copia todos os níveis. Técnicas como `JSON.parse(JSON.stringify(obj))` e bibliotecas especializadas são mencionadas para clonagem profunda.
 
-Exemplo:
+- Exemplo:
 ```javascript
 let Tenis = { tamanho: 45, estoque: true };
 let link = { link: { a: "a", b: { c: "c" } } };

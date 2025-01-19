@@ -321,6 +321,7 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 
   console.log(somaTudo(1, 2, 3, 4)); // 10
   
+---
 ## Objetos em JavaScript
 
 ### O que é um Objeto?

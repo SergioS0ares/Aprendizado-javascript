@@ -485,4 +485,161 @@ console.log(mesclar1);
 console.log(mesclar2);
 ```
 ---
+## Arrays
 
+### O que é um Array
+Um array é uma estrutura de dados que armazena uma coleção de elementos (valores), organizados em índices.
+```javascript
+const frutas = ["maçã", "banana", "laranja"];
+console.log(frutas); // ["maçã", "banana", "laranja"]
+```
+
+### Índices e Elementos
+Os elementos do array são acessados pelos índices, que começam do zero.
+```javascript
+const frutas = ["maçã", "banana", "laranja"];
+console.log(frutas[0]); // "maçã"
+console.log(frutas.length); // 3
+```
+
+### Matrizes Multidimensionais
+Arrays podem conter outros arrays, formando matrizes multidimensionais.
+```javascript
+const matriz = [[1, 2], [3, 4], [5, 6]];
+console.log(matriz[1][0]); // 3
+```
+
+### Destructuring
+Extrai valores de arrays de forma prática.
+```javascript
+const [a, b] = ["maçã", "banana", "laranja"];
+console.log(a); // "maçã"
+console.log(b); // "banana"
+```
+
+### Spread Operator
+Expande os elementos de um array.
+```javascript
+const frutas = ["maçã", "banana"];
+const maisFrutas = [...frutas, "laranja"];
+console.log(maisFrutas); // ["maçã", "banana", "laranja"]
+```
+
+### Adicionando Elementos
+```javascript
+const frutas = ["maçã", "banana"];
+frutas.push("laranja"); // Adiciona ao final
+frutas.unshift("morango"); // Adiciona ao início
+console.log(frutas); // ["morango", "maçã", "banana", "laranja"]
+```
+
+### Removendo Elementos
+```javascript
+const frutas = ["maçã", "banana", "laranja"];
+frutas.pop(); // Remove o último
+frutas.shift(); // Remove o primeiro
+console.log(frutas); // ["banana"]
+```
+
+### Removendo Elementos 2
+```javascript
+const frutas = ["maçã", "banana", "laranja"];
+const removidos = frutas.splice(1, 1); // Remove a partir do índice 1
+console.log(frutas); // ["maçã", "laranja"]
+console.log(removidos); // ["banana"]
+```
+
+### Ordenando e Revertendo Valores
+```javascript
+const numeros = [3, 1, 4, 2];
+numeros.sort();
+console.log(numeros); // [1, 2, 3, 4]
+numeros.reverse();
+console.log(numeros); // [4, 3, 2, 1]
+```
+
+### Loop for, for...in e for...of
+```javascript
+const frutas = ["maçã", "banana", "laranja"];
+for (let i = 0; i < frutas.length; i++) {
+  console.log(frutas[i]);
+}
+for (let index in frutas) {
+  console.log(frutas[index]);
+}
+for (let fruta of frutas) {
+  console.log(fruta);
+}
+```
+
+### Continue e Break em Loops
+```javascript
+const numeros = [1, 2, 3, 4, 5];
+for (let numero of numeros) {
+  if (numero === 3) continue;
+  if (numero === 5) break;
+  console.log(numero);
+}
+```
+
+### Foreach
+```javascript
+const frutas = ["maçã", "banana", "laranja"];
+frutas.forEach((fruta) => console.log(fruta));
+```
+
+### Map
+```javascript
+const numeros = [1, 2, 3];
+const dobrados = numeros.map((n) => n * 2);
+console.log(dobrados); // [2, 4, 6]
+```
+
+- **Filter**: Cria um novo array com elementos que atendem à condição.
+```javascript
+const pedidos = [
+  { id: 1, bebida: "Refrigerante" },
+  { id: 2, bebida: "Suco" }
+];
+const apenasRefrigerantes = pedidos.filter(p => p.bebida === "Refrigerante");
+console.log(apenasRefrigerantes);
+```
+
+- **Find**: Retorna o primeiro elemento que atende à condição.
+```javascript
+const pedidos = [
+  { id: 1, bebida: "Refrigerante" },
+  { id: 2, bebida: "Suco" }
+];
+const pedidoRefrigerante = pedidos.find(p => p.bebida === "Refrigerante");
+console.log(pedidoRefrigerante);
+```
+
+- **Every**: Verifica se todos os elementos atendem à condição.
+```javascript
+const pedidos = [
+  { id: 1, preco: 10 },
+  { id: 2, preco: 20 }
+];
+const todosCaros = pedidos.every(p => p.preco > 15);
+console.log(todosCaros);
+```
+
+- **Some**: Verifica se algum elemento atende à condição.
+```javascript
+const pedidos = [
+  { id: 1, preco: 10 },
+  { id: 2, preco: 20 }
+];
+const algumCaro = pedidos.some(p => p.preco > 15);
+console.log(algumCaro);
+```
+
+- **Reduce**: Condensa os valores em um único resultado.
+```javascript
+const pedidos = [
+  { id: 1, preco: 10 },
+  { id: 2, preco: 20 }
+];
+const total = pedidos.reduce((soma, p) => soma + p.preco, 0);
+console.log(total); // 30

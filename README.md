@@ -486,24 +486,26 @@ console.log(mesclar2);
 ```
 ---
 
+---
+
 ## O que é um Array
 
-Um array é uma estrutura de dados utilizada para armazenar múltiplos valores em uma única variável. Ele é muito útil para organizar coleções de itens relacionados.
+- Um array é uma estrutura de dados utilizada para armazenar múltiplos valores em uma única variável. Ele é muito útil para organizar coleções de itens relacionados.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana", "laranja"];
 console.log(frutas);
 ```
 
----
 
-## Índices e Elementos
 
-Os elementos de um array são indexados a partir do zero, permitindo acesso individual a cada item pelo índice.
+### Índices e Elementos
 
-Exemplo:
+- Os elementos de um array são indexados a partir do zero, permitindo acesso individual a cada item pelo índice.
+
+- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana", "laranja"];
@@ -511,26 +513,23 @@ console.log(frutas[0]); // "maçã"
 console.log(frutas.length); // 3
 ```
 
----
 
-## Matrizes Multidimensionais
+### Matrizes Multidimensionais
 
-Matrizes multidimensionais são arrays que contêm outros arrays, criando estruturas em várias camadas.
+- Matrizes multidimensionais são arrays que contêm outros arrays, criando estruturas em várias camadas.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const matriz = [[1, 2], [3, 4]];
 console.log(matriz[0][1]); // 2
 ```
 
----
-
 ## Destructuring
 
-O destructuring permite extrair valores de um array e atribuí-los diretamente a variáveis.
+- O destructuring permite extrair valores de um array e atribuí-los diretamente a variáveis.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana", "laranja"];
@@ -538,13 +537,11 @@ const [primeira, segunda] = frutas;
 console.log(primeira); // "maçã"
 ```
 
----
-
 ## Spread Operator
 
-O operador spread (`...`) é usado para expandir elementos de um array.
+- O operador spread (`...`) é usado para expandir elementos de um array.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana"];
@@ -552,13 +549,11 @@ const todasFrutas = [...frutas, "laranja"];
 console.log(todasFrutas);
 ```
 
----
-
 ### Adicionando Elementos
 
-Podemos adicionar elementos ao início ou ao final de um array utilizando os métodos `unshift` e `push`, respectivamente.
+- Podemos adicionar elementos ao início ou ao final de um array utilizando os métodos `unshift` e `push`, respectivamente.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana"];
@@ -567,13 +562,11 @@ frutas.unshift("morango");
 console.log(frutas);
 ```
 
----
-
 ### Removendo Elementos
 
-Os métodos `shift` e `pop` removem o primeiro e o último elemento de um array, respectivamente.
+- Os métodos `shift` e `pop` removem o primeiro e o último elemento de um array, respectivamente.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana", "laranja"];
@@ -582,13 +575,11 @@ frutas.shift();
 console.log(frutas);
 ```
 
----
-
 ### Removendo Elementos 2
 
-Podemos usar os métodos `slice` e `splice` para remover elementos de um array em posições específicas.
+- Podemos usar os métodos `slice` e `splice` para remover elementos de um array em posições específicas.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana", "laranja"];
@@ -598,13 +589,11 @@ console.log(novasFrutas);
 console.log(frutas);
 ```
 
----
-
 ### Ordenando e Revertendo Valores
 
-O método `sort` ordena os elementos de um array, enquanto o `reverse` inverte a ordem dos elementos.
+- O método `sort` ordena os elementos de um array, enquanto o `reverse` inverte a ordem dos elementos.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const numeros = [3, 1, 4];
@@ -613,13 +602,11 @@ numeros.reverse();
 console.log(numeros);
 ```
 
----
-
 ### Loop for, for...in e for...of
 
-Os loops permitem percorrer arrays de diferentes maneiras.
+- Os loops permitem percorrer arrays de diferentes maneiras.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana"];
@@ -637,13 +624,11 @@ for (let fruta of frutas) {
 }
 ```
 
----
-
 ### Continue e Break em Loops
 
-Os comandos `continue` e `break` controlam o fluxo de execução dentro de loops.
+- Os comandos `continue` e `break` controlam o fluxo de execução dentro de loops.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const numeros = [1, 2, 3, 4];
@@ -655,26 +640,22 @@ for (let numero of numeros) {
 }
 ```
 
----
-
 ### Foreach
 
-O método `forEach` executa uma função para cada elemento do array.
+- O método `forEach` executa uma função para cada elemento do array.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana"];
 frutas.forEach((fruta) => console.log(fruta));
 ```
 
----
-
 ### Map
 
-O método `map` cria um novo array aplicando uma função a cada elemento do original.
+- O método `map` cria um novo array aplicando uma função a cada elemento do original.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const numeros = [1, 2, 3];
@@ -682,13 +663,11 @@ const dobro = numeros.map((numero) => numero * 2);
 console.log(dobro);
 ```
 
----
-
 ### Filter: Cria um novo array com elementos que atendem à condição.
 
-O método `filter` é usado para criar um novo array contendo apenas os elementos que satisfazem uma condição específica.
+- O método `filter` é usado para criar um novo array contendo apenas os elementos que satisfazem uma condição específica.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const numeros = [1, 2, 3, 4];
@@ -696,13 +675,11 @@ const pares = numeros.filter((numero) => numero % 2 === 0);
 console.log(pares);
 ```
 
----
-
 ### Find: Retorna o primeiro elemento que atende à condição.
 
-O método `find` retorna o primeiro elemento no array que satisfaz a condição fornecida.
+- O método `find` retorna o primeiro elemento no array que satisfaz a condição fornecida.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const numeros = [1, 2, 3, 4];
@@ -710,13 +687,11 @@ const primeiroPar = numeros.find((numero) => numero % 2 === 0);
 console.log(primeiroPar);
 ```
 
----
-
 ### Every: Verifica se todos os elementos atendem à condição.
 
-O método `every` verifica se todos os elementos de um array satisfazem a condição fornecida.
+- O método `every` verifica se todos os elementos de um array satisfazem a condição fornecida.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const numeros = [2, 4, 6];
@@ -724,13 +699,11 @@ const todosPares = numeros.every((numero) => numero % 2 === 0);
 console.log(todosPares);
 ```
 
----
-
 ### Some: Verifica se algum elemento atende à condição.
 
-O método `some` verifica se pelo menos um elemento do array satisfaz a condição fornecida.
+- O método `some` verifica se pelo menos um elemento do array satisfaz a condição fornecida.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const numeros = [1, 3, 5, 6];
@@ -738,13 +711,11 @@ const temPar = numeros.some((numero) => numero % 2 === 0);
 console.log(temPar);
 ```
 
----
-
 ### Reduce: Condensa os valores em um único resultado.
 
-O método `reduce` aplica uma função acumuladora para reduzir o array a um único valor.
+- O método `reduce` aplica uma função acumuladora para reduzir o array a um único valor.
 
-Exemplo:
+- Exemplo:
 
 ```javascript
 const numeros = [1, 2, 3, 4];

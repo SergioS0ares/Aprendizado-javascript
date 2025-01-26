@@ -4,6 +4,9 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 
 ## Índice
 
+
+# Sumário
+
 1. [Introdução ao JavaScript](#introdução-ao-javascript)
 2. [Strings](#strings)
 3. [Tipos Primitivos](#tipos-primitivos)
@@ -32,8 +35,21 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 26. [O que é um Array](#o-que-é-um-array)
 27. [Índices e Elementos](#índices-e-elementos)
 28. [Matrizes Multidimensionais](#matrizes-multidimensionais)
-29. [Destructuring Array](#destructuring-array)
-
+29. [Destructuring em Arrays](#destructuring-em-arrays)
+30. [Spread Operator](#spread-operator)
+31. [Adicionando Elementos](#adicionando-elementos)
+32. [Removendo Elementos](#removendo-elementos)
+33. [Removendo Elementos 2](#removendo-elementos-2)
+34. [Ordenando e Revertendo Valores](#ordenando-e-revertendo-valores)
+35. [Loop for, for...in e for...of](#loop-for-forin-e-forof)
+36. [Continue e Break em Loops](#continue-e-break-em-loops)
+37. [Foreach](#foreach)
+38. [Map](#map)
+39. [Filter](#filter)
+40. [Find](#find)
+41. [Every](#every)
+42. [Some](#some)
+43. [Reduce](#reduce)
 
 ---
 
@@ -525,7 +541,7 @@ const matriz = [[1, 2], [3, 4]];
 console.log(matriz[0][1]); // 2
 ```
 
-## Destructuring
+### Destructuring
 
 - O destructuring permite extrair valores de um array e atribuí-los diretamente a variáveis.
 
@@ -537,7 +553,7 @@ const [primeira, segunda] = frutas;
 console.log(primeira); // "maçã"
 ```
 
-## Spread Operator
+### Spread Operator
 
 - O operador spread (`...`) é usado para expandir elementos de um array.
 

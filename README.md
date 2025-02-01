@@ -271,7 +271,6 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 
 ## IIFE - Expressão de Função Invocada Imediatamente
 
-- Exemplo:
   ```javascript
   (function () {
     console.log("Executado imediatamente");
@@ -282,7 +281,6 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 
 ## Strict Mode
 
-- Exemplo:
   ```javascript
   "use strict";
 
@@ -298,7 +296,6 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 - Definição:
   Uma closure ocorre normalmente quando uma função é declarada dentro do corpo de outra e acessa variáveis do escopo externo.
 
-- Exemplo:
   ```javascript
   function criarContador() {
     let contador = 0;
@@ -327,7 +324,6 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 - Definição:
   `arguments` é um objeto semelhante a um array disponível dentro de funções tradicionais, que contém os valores dos parâmetros passados para a função.
 
-- Exemplo:
   ```javascript
   function somaTudo() {
     let total = 0;
@@ -346,7 +342,6 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 - Objetos são coleções de propriedades, onde cada propriedade possui uma chave e um valor. 
 Elas podem ser acessadas e manipuladas dinamicamente.
 
-- Exemplo:
 ```javascript
 let Tenis = {
     tipo: "Tenis de Corrida",
@@ -383,7 +378,6 @@ console.log(Tenis.tamanho);
 ### Propriedades, Métodos e Valores Curtos
 - Este tópico aborda como objetos podem ser estruturados de forma concisa, utilizando nomes de variáveis como valores de propriedades diretamente, além de métodos simplificados para declarar funções dentro de objetos.
 
-- Exemplo:
 ```javascript
 function Tenis(t, estoque, preco) {
     return { tamanho: t, estoque, preco };
@@ -408,7 +402,6 @@ console.log(Tenis3.getTamanho());
 ### Acessando Valores do Objeto
 - Demonstra como acessar os valores de propriedades de um objeto utilizando a notação de ponto (`obj.propriedade`) e a notação de colchetes (`obj['propriedade']`).
 
-- Exemplo:
 ```javascript
 const Tenis = { tamanho: 45, marca: "Nike" };
 console.log(Tenis.marca);
@@ -418,7 +411,6 @@ console.log(Tenis.tamanho);
 ### Destructuring
 - Explica como extrair valores de propriedades de um objeto diretamente em variáveis usando a técnica de destructuring. Também aborda como definir valores padrão caso a propriedade não exista no objeto.
 
-- Exemplo:
 ```javascript
 const Tenis = {
     tamanho: 45,
@@ -436,7 +428,6 @@ console.log(tamanho, estoque, marcas);
 ### Verificando a Existência de Propriedade
 - Mostra como verificar se uma propriedade existe em um objeto utilizando métodos como `hasOwnProperty` e o operador `in`.
 
-- Exemplo:
 ```javascript
 const Tenis = { tamanho: 45, estoque: true };
 console.log(Tenis.hasOwnProperty("tamanho"));
@@ -446,7 +437,6 @@ if ("tamanho" in Tenis) console.log("Existe tamanho");
 ### Adicionando e Atualizando Dados do Objeto
 - Explica como adicionar novas propriedades a um objeto ou atualizar valores de propriedades existentes usando a notação de ponto ou de colchetes.
 
-- Exemplo:
 ```javascript
 let Tenis = { tamanho: 45, estoque: true };
 Tenis.tamanho = 42;
@@ -457,7 +447,6 @@ console.log(Tenis);
 ### Removendo a Propriedade do Objeto
 - Descreve como remover propriedades de um objeto utilizando o operador `delete` e as implicações dessa operação no objeto.
 
-- Exemplo:
 ```javascript
 let Tenis = { tamanho: 45, estoque: true };
 delete Tenis.estoque;
@@ -467,7 +456,6 @@ console.log(Tenis);
 ### Mesclando e Clonando Objetos
 - Aborda como combinar dois ou mais objetos em um único objeto utilizando `Object.assign` e o operador spread (`...`). Também introduz práticas para criar cópias rasas de objetos.
 
-- Exemplo:
 ```javascript
 let Tenis = { tamanho: 45, estoque: true };
 let link = { link: { a: "a", b: { c: "c" } } };
@@ -481,7 +469,6 @@ console.log(mesclar2);
 ### Clonagem de Objetos Rasos e Profundos
 - Diferencia a clonagem rasa e profunda de objetos. A clonagem rasa copia apenas o nível superior de propriedades, enquanto a profunda copia todos os níveis. Técnicas como `JSON.parse(JSON.stringify(obj))` e bibliotecas especializadas são mencionadas para clonagem profunda.
 
-- Exemplo:
 ```javascript
 let Tenis = { tamanho: 45, estoque: true };
 let link = { link: { a: "a", b: { c: "c" } } };
@@ -504,8 +491,6 @@ console.log(mesclar2);
 
 - Um array é uma estrutura de dados utilizada para armazenar múltiplos valores em uma única variável. Ele é muito útil para organizar coleções de itens relacionados.
 
-- Exemplo:
-
 ```javascript
 const frutas = ["maçã", "banana", "laranja"];
 console.log(frutas);
@@ -516,8 +501,6 @@ console.log(frutas);
 ### Índices e Elementos
 
 - Os elementos de um array são indexados a partir do zero, permitindo acesso individual a cada item pelo índice.
-
-- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana", "laranja"];
@@ -530,8 +513,6 @@ console.log(frutas.length); // 3
 
 - Matrizes multidimensionais são arrays que contêm outros arrays, criando estruturas em várias camadas.
 
-- Exemplo:
-
 ```javascript
 const matriz = [[1, 2], [3, 4]];
 console.log(matriz[0][1]); // 2
@@ -540,8 +521,6 @@ console.log(matriz[0][1]); // 2
 ### Destructuring
 
 - O destructuring permite extrair valores de um array e atribuí-los diretamente a variáveis.
-
-- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana", "laranja"];
@@ -553,8 +532,6 @@ console.log(primeira); // "maçã"
 
 - O operador spread (`...`) é usado para expandir elementos de um array.
 
-- Exemplo:
-
 ```javascript
 const frutas = ["maçã", "banana"];
 const todasFrutas = [...frutas, "laranja"];
@@ -564,8 +541,6 @@ console.log(todasFrutas);
 ### Adicionando Elementos
 
 - Podemos adicionar elementos ao início ou ao final de um array utilizando os métodos `unshift` e `push`, respectivamente.
-
-- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana"];
@@ -578,8 +553,6 @@ console.log(frutas);
 
 - Os métodos `shift` e `pop` removem o primeiro e o último elemento de um array, respectivamente.
 
-- Exemplo:
-
 ```javascript
 const frutas = ["maçã", "banana", "laranja"];
 frutas.pop();
@@ -590,8 +563,6 @@ console.log(frutas);
 ### Removendo Elementos 2
 
 - Podemos usar os métodos `slice` e `splice` para remover elementos de um array em posições específicas.
-
-- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana", "laranja"];
@@ -605,8 +576,6 @@ console.log(frutas);
 
 - O método `sort` ordena os elementos de um array, enquanto o `reverse` inverte a ordem dos elementos.
 
-- Exemplo:
-
 ```javascript
 const numeros = [3, 1, 4];
 numeros.sort();
@@ -617,8 +586,6 @@ console.log(numeros);
 ### Loop for, for...in e for...of
 
 - Os loops permitem percorrer arrays de diferentes maneiras.
-
-- Exemplo:
 
 ```javascript
 const frutas = ["maçã", "banana"];
@@ -640,8 +607,6 @@ for (let fruta of frutas) {
 
 - Os comandos `continue` e `break` controlam o fluxo de execução dentro de loops.
 
-- Exemplo:
-
 ```javascript
 const numeros = [1, 2, 3, 4];
 
@@ -656,8 +621,6 @@ for (let numero of numeros) {
 
 - O método `forEach` executa uma função para cada elemento do array.
 
-- Exemplo:
-
 ```javascript
 const frutas = ["maçã", "banana"];
 frutas.forEach((fruta) => console.log(fruta));
@@ -666,8 +629,6 @@ frutas.forEach((fruta) => console.log(fruta));
 ### Map
 
 - O método `map` cria um novo array aplicando uma função a cada elemento do original.
-
-- Exemplo:
 
 ```javascript
 const numeros = [1, 2, 3];
@@ -679,8 +640,6 @@ console.log(dobro);
 
 - O método `filter` é usado para criar um novo array contendo apenas os elementos que satisfazem uma condição específica.
 
-- Exemplo:
-
 ```javascript
 const numeros = [1, 2, 3, 4];
 const pares = numeros.filter((numero) => numero % 2 === 0);
@@ -690,8 +649,6 @@ console.log(pares);
 ### Find: Retorna o primeiro elemento que atende à condição.
 
 - O método `find` retorna o primeiro elemento no array que satisfaz a condição fornecida.
-
-- Exemplo:
 
 ```javascript
 const numeros = [1, 2, 3, 4];
@@ -703,8 +660,6 @@ console.log(primeiroPar);
 
 - O método `every` verifica se todos os elementos de um array satisfazem a condição fornecida.
 
-- Exemplo:
-
 ```javascript
 const numeros = [2, 4, 6];
 const todosPares = numeros.every((numero) => numero % 2 === 0);
@@ -715,8 +670,6 @@ console.log(todosPares);
 
 - O método `some` verifica se pelo menos um elemento do array satisfaz a condição fornecida.
 
-- Exemplo:
-
 ```javascript
 const numeros = [1, 3, 5, 6];
 const temPar = numeros.some((numero) => numero % 2 === 0);
@@ -726,8 +679,6 @@ console.log(temPar);
 ### Reduce: Condensa os valores em um único resultado.
 
 - O método `reduce` aplica uma função acumuladora para reduzir o array a um único valor.
-
-- Exemplo:
 
 ```javascript
 const numeros = [1, 2, 3, 4];

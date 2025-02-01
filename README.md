@@ -813,14 +813,3 @@ for (let element of p) {
   console.log(element);
 }
 ```
-
-### Qual método devo usar?
-
-- Os métodos mais recomendados atualmente são `querySelector` e `querySelectorAll`, pois oferecem maior flexibilidade na seleção de elementos.
-
-```javascript
-const h1 = document.querySelector("h1");
-const paragraphs = document.querySelectorAll("p");
-```
-
-- Enquanto métodos como `getElementById`, `getElementsByClassName` e `getElementsByTagName` ainda são funcionais, eles são menos utilizados devido à falta de compatibilidade com seletores mais avançados.

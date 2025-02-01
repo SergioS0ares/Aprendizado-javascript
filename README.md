@@ -764,30 +764,34 @@ for (let element of p) {
   console.log(element);
 }
 ```
+
+
 # Manipulando Valores no DOM
 
-## 1. `textContent` vs `innerText`
+## textContent e innerText
+O textContent retorna o texto de um elemento, incluindo espaçamentos e sem interpretar HTML.  
+O innerText retorna apenas o texto visível ao usuário, sem considerar elementos ocultos ou formatação.
 
-- `textContent`: Retorna o texto de um elemento, incluindo formatações, mas sem os elementos HTML.
-- `innerText`: Retorna apenas o texto visível, sem formatações ou elementos HTML.
+```javascript
+"use strict";
 
-```js
 const classP = document.querySelector(".paragrafo");
 const idP = document.querySelector("#paragrafo");
 
-console.log(classP.textContent); // Retorna o texto com formatação
+console.log(classP.textContent); // Retorna o texto completo
 console.log(idP.innerText); // Retorna apenas o texto visível
 
 classP.textContent = "Dener Troquatte";
-idP.innerText = "<strong>Dener Troquatte</strong>";
+idP.innerText = "<strong>Dener Troquatte</strong>"; // Não interpreta como HTML
 ```
 
-## 2. `innerHTML` vs `createElement`
+## innerHTML versus createElement
+O innerHTML permite definir ou obter o conteúdo HTML interno de um elemento.  
+O createElement cria um novo elemento HTML no DOM.
 
-- `innerHTML`: Permite modificar o conteúdo de um elemento, incluindo elementos HTML.
-- `createElement`: Cria elementos HTML dinamicamente.
+```javascript
+"use strict";
 
-```js
 const div = document.querySelector("div");
 console.log(1, div);
 
@@ -804,28 +808,30 @@ const elementUl = document.createElement("ul");
 div.appendChild(elementUl);
 ```
 
-## 3. Manipulando valores de `input`
+## Manipulando Valores de Inputs
+A propriedade .value obtém ou define o valor de um campo de entrada.
 
-- `input.value`: Obtém e altera o valor de um campo de entrada.
+```javascript
+"use strict";
 
-```js
 const input = document.querySelector("#name");
 
-console.log(input.value);
+console.log(input.value); // Exibe o valor atual do input
 
 setTimeout(() => {
-  input.value = "Abacate";
+  input.value = "Abacate"; // Altera o valor do input após 1 segundo
   console.log(input.value);
 }, 1000);
 ```
 
-## 4. Manipulando Atributos
+## Manipulando Atributos
+setAttribute define ou altera um atributo de um elemento.  
+getAttribute obtém o valor de um atributo.  
+removeAttribute remove um atributo de um elemento.
 
-- `setAttribute()`: Define ou altera um atributo.
-- `getAttribute()`: Obtém o valor de um atributo.
-- `removeAttribute()`: Remove um atributo de um elemento.
+```javascript
+"use strict";
 
-```js
 const div = document.querySelector("div");
 div.setAttribute("id", "teste");
 
@@ -836,11 +842,12 @@ div.removeAttribute("id");
 console.log(div);
 ```
 
-## 5. `createDocumentFragment`
+## Criando Elementos com createDocumentFragment
+O createDocumentFragment melhora a performance ao adicionar múltiplos elementos ao DOM.
 
-- `createDocumentFragment`: Otimiza a inserção de múltiplos elementos no DOM.
+```javascript
+"use strict";
 
-```js
 const ul = document.querySelector("ul");
 const fragment = document.createDocumentFragment();
 
@@ -855,14 +862,16 @@ lanches.forEach((element) => {
 ul.append(fragment);
 ```
 
-## 6. Removendo Elementos do DOM
+## Removendo Elementos do DOM
+O método .remove() exclui um elemento do DOM.
 
-- `.remove()`: Remove um elemento do DOM.
+```javascript
+"use strict";
 
-```js
 const h1 = document.querySelector("h1");
-h1.remove();
+h1.remove(); // Remove o título
 
 const li = document.querySelectorAll("li");
-li[2].remove();
+li[2].remove(); // Remove o terceiro item da lista
 ```
+

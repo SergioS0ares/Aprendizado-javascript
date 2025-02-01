@@ -2,9 +2,6 @@
 
 Este repositório contém meus estudos e experimentos em JavaScript, incluindo conceitos básicos, boas práticas e exemplos práticos.
 
-## Índice
-
-
 # Sumário
 
 1. [Introdução ao JavaScript](#introdução-ao-javascript)
@@ -50,6 +47,7 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 41. [Every](#every)
 42. [Some](#some)
 43. [Reduce](#reduce)
+44. [DOM](#dom)
 
 ---
 
@@ -736,3 +734,93 @@ const numeros = [1, 2, 3, 4];
 const soma = numeros.reduce((total, numero) => total + numero, 0);
 console.log(soma);
 ```
+---
+
+## DOM
+
+O **DOM (Document Object Model)** é a interface que permite interação com documentos HTML e XML através de JavaScript. Ele transforma a estrutura do documento em um modelo de árvore, onde cada elemento é um nó acessível e manipulável.
+
+### O que é e para que serve o DOM
+
+- O DOM permite que o JavaScript manipule elementos da página, alterando textos, estilos e até removendo ou adicionando elementos dinâmicos.
+
+```javascript
+"use strict";
+
+const h1 = document.querySelector("h1");
+h1.style.background = "red"; // Altera o fundo do h1 para vermelho
+```
+
+### Selecionando Elementos com querySelector
+
+- O `querySelector` retorna o primeiro elemento que corresponde ao seletor especificado.
+
+```javascript
+const h1 = document.querySelector("h1"); // Seleciona a primeira tag h1
+const classP = document.querySelector(".paragrafo"); // Seleciona o primeiro elemento com a classe "paragrafo"
+const idP = document.querySelector("#paragrafo"); // Seleciona o elemento com o ID "paragrafo"
+
+console.log(h1, classP, idP);
+```
+
+### Selecionando Elementos com querySelectorAll
+
+- O `querySelectorAll` retorna uma **NodeList** com todos os elementos que correspondem ao seletor.
+
+```javascript
+const p = document.querySelectorAll("p");
+
+p.forEach((element, index) => {
+  element.style.color = "white";
+  element.style.padding = "20px";
+
+  if (index === 0) element.style.background = "blue";
+  if (index === 1) element.style.background = "red";
+});
+```
+
+### Selecionando Elementos com getElementById
+
+- O `getElementById` retorna um único elemento com base no seu ID.
+
+```javascript
+const p = document.getElementById("paragrafo");
+console.log(p);
+```
+
+### Selecionando Elementos com getElementsByClassName
+
+- O `getElementsByClassName` retorna uma **HTMLCollection** com todos os elementos que possuem a classe especificada.
+
+```javascript
+const p = document.getElementsByClassName("paragrafo");
+console.log(p);
+
+for (let element of p) {
+  console.log(element);
+}
+```
+
+### Selecionando Elementos com getElementsByTagName
+
+- O `getElementsByTagName` retorna uma **HTMLCollection** de todos os elementos com a tag especificada.
+
+```javascript
+const p = document.getElementsByTagName("p");
+console.log(p);
+
+for (let element of p) {
+  console.log(element);
+}
+```
+
+### Qual método devo usar?
+
+- Os métodos mais recomendados atualmente são `querySelector` e `querySelectorAll`, pois oferecem maior flexibilidade na seleção de elementos.
+
+```javascript
+const h1 = document.querySelector("h1");
+const paragraphs = document.querySelectorAll("p");
+```
+
+- Enquanto métodos como `getElementById`, `getElementsByClassName` e `getElementsByTagName` ainda são funcionais, eles são menos utilizados devido à falta de compatibilidade com seletores mais avançados.

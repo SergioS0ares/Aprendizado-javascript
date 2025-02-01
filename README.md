@@ -766,11 +766,9 @@ for (let element of p) {
 ```
 
 
-# Manipulando Valores no DOM
-
-## textContent e innerText
-O textContent retorna o texto de um elemento, incluindo espaçamentos e sem interpretar HTML.  
-O innerText retorna apenas o texto visível ao usuário, sem considerar elementos ocultos ou formatação.
+### textContent e innerText
+- O textContent retorna o texto de um elemento, incluindo espaçamentos e sem interpretar HTML.  
+- O innerText retorna apenas o texto visível ao usuário, sem considerar elementos ocultos ou formatação.
 
 ```javascript
 "use strict";
@@ -785,9 +783,9 @@ classP.textContent = "Dener Troquatte";
 idP.innerText = "<strong>Dener Troquatte</strong>"; // Não interpreta como HTML
 ```
 
-## innerHTML versus createElement
-O innerHTML permite definir ou obter o conteúdo HTML interno de um elemento.  
-O createElement cria um novo elemento HTML no DOM.
+### innerHTML versus createElement
+- O innerHTML permite definir ou obter o conteúdo HTML interno de um elemento.  
+- O createElement cria um novo elemento HTML no DOM.
 
 ```javascript
 "use strict";
@@ -808,8 +806,8 @@ const elementUl = document.createElement("ul");
 div.appendChild(elementUl);
 ```
 
-## Manipulando Valores de Inputs
-A propriedade .value obtém ou define o valor de um campo de entrada.
+### Manipulando Valores de Inputs
+- A propriedade .value obtém ou define o valor de um campo de entrada.
 
 ```javascript
 "use strict";
@@ -824,10 +822,10 @@ setTimeout(() => {
 }, 1000);
 ```
 
-## Manipulando Atributos
-setAttribute define ou altera um atributo de um elemento.  
-getAttribute obtém o valor de um atributo.  
-removeAttribute remove um atributo de um elemento.
+### Manipulando Atributos
+- setAttribute define ou altera um atributo de um elemento.  
+- getAttribute obtém o valor de um atributo.  
+- removeAttribute remove um atributo de um elemento.
 
 ```javascript
 "use strict";
@@ -842,8 +840,8 @@ div.removeAttribute("id");
 console.log(div);
 ```
 
-## Criando Elementos com createDocumentFragment
-O createDocumentFragment melhora a performance ao adicionar múltiplos elementos ao DOM.
+### Criando Elementos com createDocumentFragment
+- O createDocumentFragment melhora a performance ao adicionar múltiplos elementos ao DOM.
 
 ```javascript
 "use strict";
@@ -862,8 +860,8 @@ lanches.forEach((element) => {
 ul.append(fragment);
 ```
 
-## Removendo Elementos do DOM
-O método .remove() exclui um elemento do DOM.
+### Removendo Elementos do DOM
+- O método .remove() exclui um elemento do DOM.
 
 ```javascript
 "use strict";

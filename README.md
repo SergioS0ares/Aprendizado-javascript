@@ -502,8 +502,6 @@ console.log(mesclar2);
 ```
 ---
 
----
-
 ## O que é um Array
 
 - Um array é uma estrutura de dados utilizada para armazenar múltiplos valores em uma única variável. Ele é muito útil para organizar coleções de itens relacionados.

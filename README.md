@@ -52,8 +52,16 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 46. [Manipulação de Estilos Inline (style)](#manipulação-de-estilos-inline-style)
 47. [Manipulação de Classes com classList](#manipulação-de-classes-com-classlist)
 48. [Uso do className para acessar classes](#uso-do-classname-para-acessar-classes)
-
-
+49. [Pai (parentElement e parentNode)](#pai-parentElement-e-parentNode)
+50. [Filhos (children, childNodes)](#filhos-children-childNodes)
+51. [Filhos (firstChild, firstElementChild)](#filhos-firstChild-firstElementChild)
+52. [Filhos (lastChild, lastElementChild)](#filhos-lastChild-lastElementChild)
+53. [Irmãos (nextSibling, nextElementSibling)](#irmãos-nextSibling-nextElementSibling)
+54. [Irmãos (previousSibling, previousElementSibling)](#irmãos-previousSibling-previousElementSibling)
+55. [append e appendChild](#append-e-appendChild)
+56. [insertBefore](#insertBefore)
+57. [after e before](#after-e-before)
+ 
 ---
 
 ## Introdução ao JavaScript
@@ -907,4 +915,120 @@ li[2].remove(); // Remove o terceiro item da lista
   const h1 = document.querySelector("h1");
   console.log(h1.className); // Exibe todas as classes aplicadas
   ```
+---
+## Pai (parentElement e parentNode)
+
+Permite acessar o elemento pai de um nó no DOM.
+
+```javascript
+const body = document.querySelector("body");
+console.log(body.parentElement); // Retorna o elemento pai
+console.log(body.parentNode); // Retorna o nó pai
+```
+
+---
+
+## Filhos (children, childNodes)
+
+Permite acessar os elementos filhos de um nó no DOM.
+
+```javascript
+const container = document.querySelector(".container");
+console.log(container.children); // Retorna os elementos filhos (HTMLCollection)
+console.log(container.childNodes); // Retorna todos os nós filhos (NodeList)
+```
+
+---
+
+## Filhos (firstChild, firstElementChild)
+
+Acessa o primeiro filho de um elemento.
+
+```javascript
+const p = document.querySelector(".paragrafo");
+console.log(p.firstChild); // Pode ser um texto ou espaço
+console.log(p.firstElementChild); // Retorna o primeiro elemento filho
+```
+
+---
+
+## Filhos (lastChild, lastElementChild)
+
+Acessa o último filho de um elemento.
+
+```javascript
+const p = document.querySelector(".paragrafo");
+console.log(p.lastChild); // Último nó filho (pode ser um texto)
+console.log(p.lastElementChild); // Último elemento filho
+```
+
+---
+
+##  Irmãos (nextSibling, nextElementSibling)
+
+Acessa o próximo elemento irmão no DOM.
+
+```javascript
+const p = document.querySelector(".paragrafo");
+console.log(p.nextSibling); // Próximo nó irmão
+console.log(p.nextElementSibling); // Próximo elemento irmão
+```
+
+---
+
+## Irmãos (previousSibling, previousElementSibling)
+
+Acessa o elemento irmão anterior no DOM.
+
+```javascript
+const body = document.querySelector("body");
+console.log(body.previousSibling); // Nó anterior
+console.log(body.previousElementSibling); // Elemento irmão anterior
+```
+
+---
+
+## append e appendChild
+
+Adiciona elementos ao DOM. `append` pode adicionar múltiplos nós, enquanto `appendChild` adiciona apenas um nó.
+
+```javascript
+const container = document.querySelector(".container");
+const newDiv = document.createElement("div");
+newDiv.innerText = "Novo elemento";
+
+container.append("Texto adicionado", newDiv);
+container.appendChild(newDiv);
+```
+
+---
+
+## insertBefore
+
+Insere um elemento antes de um nó específico no DOM.
+
+```javascript
+const container = document.querySelector(".container");
+const paragrafo = document.querySelector("#paragrafo");
+const newH2 = document.createElement("h2");
+newH2.innerText = "Novo H2";
+
+container.insertBefore(newH2, paragrafo);
+```
+
+---
+
+## after e before
+
+Permite inserir elementos antes ou depois de um nó no DOM.
+
+```javascript
+const container = document.querySelector(".container");
+const newP = document.createElement("p");
+newP.innerText = "Texto adicionado";
+
+container.before(newP); // Adiciona antes do container
+// container.after(newP); // Adicionaria depois do container
+```
+
 ---

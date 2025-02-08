@@ -872,4 +872,32 @@ h1.remove(); // Remove o título
 const li = document.querySelectorAll("li");
 li[2].remove(); // Remove o terceiro item da lista
 ```
+### Manipulação de Estilos e Classes no DOM
+- **Manipulação de Estilos Inline (`style`)**  
+  Permite alterar diretamente os estilos de um elemento HTML via JavaScript.
+
+  ```javascript
+  const h1 = document.querySelector("h1");
+  h1.style.color = "red";
+  h1.style.fontFamily = "Arial";
+  ```
+
+- **Manipulação de Classes com `classList`**  
+  Métodos úteis para gerenciar classes CSS dinamicamente.
+
+  ```javascript
+  const h1 = document.querySelector("h1");
+  h1.classList.add("active"); // Adiciona uma classe
+  h1.classList.remove("inactive"); // Remove uma classe
+  h1.classList.toggle("highlight"); // Alterna a presença da classe
+  console.log(h1.classList.contains("active")); // Verifica se a classe existe
+  ```
+
+- **Uso do `className` para acessar classes**  
+  Permite acessar e modificar todas as classes de um elemento como string.
+
+  ```javascript
+  const h1 = document.querySelector("h1");
+  console.log(h1.className); // Exibe todas as classes aplicadas
+  ```
 

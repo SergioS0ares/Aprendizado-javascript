@@ -918,7 +918,7 @@ li[2].remove(); // Remove o terceiro item da lista
 
 ### Pai (parentElement e parentNode)
 
-Permite acessar o elemento pai de um nó no DOM.
+- Permite acessar o elemento pai de um nó no DOM.
 
 ```javascript
 const body = document.querySelector("body");
@@ -928,7 +928,7 @@ console.log(body.parentNode); // Retorna o nó pai
 
 ### Filhos (children, childNodes)
 
-Permite acessar os elementos filhos de um nó no DOM.
+- Permite acessar os elementos filhos de um nó no DOM.
 
 ```javascript
 const container = document.querySelector(".container");
@@ -938,7 +938,7 @@ console.log(container.childNodes); // Retorna todos os nós filhos (NodeList)
 
 ### Filhos (firstChild, firstElementChild)
 
-Acessa o primeiro filho de um elemento.
+- Acessa o primeiro filho de um elemento.
 
 ```javascript
 const p = document.querySelector(".paragrafo");
@@ -948,7 +948,7 @@ console.log(p.firstElementChild); // Retorna o primeiro elemento filho
 
 ### Filhos (lastChild, lastElementChild)
 
-Acessa o último filho de um elemento.
+- Acessa o último filho de um elemento.
 
 ```javascript
 const p = document.querySelector(".paragrafo");
@@ -958,7 +958,7 @@ console.log(p.lastElementChild); // Último elemento filho
 
 ###  Irmãos (nextSibling, nextElementSibling)
 
-Acessa o próximo elemento irmão no DOM.
+- Acessa o próximo elemento irmão no DOM.
 
 ```javascript
 const p = document.querySelector(".paragrafo");
@@ -968,7 +968,7 @@ console.log(p.nextElementSibling); // Próximo elemento irmão
 
 ### Irmãos (previousSibling, previousElementSibling)
 
-Acessa o elemento irmão anterior no DOM.
+- Acessa o elemento irmão anterior no DOM.
 
 ```javascript
 const body = document.querySelector("body");
@@ -978,7 +978,7 @@ console.log(body.previousElementSibling); // Elemento irmão anterior
 
 ### append e appendChild
 
-Adiciona elementos ao DOM. `append` pode adicionar múltiplos nós, enquanto `appendChild` adiciona apenas um nó.
+- Adiciona elementos ao DOM. `append` pode adicionar múltiplos nós, enquanto `appendChild` adiciona apenas um nó.
 
 ```javascript
 const container = document.querySelector(".container");
@@ -991,7 +991,7 @@ container.appendChild(newDiv);
 
 ### insertBefore
 
-Insere um elemento antes de um nó específico no DOM.
+- Insere um elemento antes de um nó específico no DOM.
 
 ```javascript
 const container = document.querySelector(".container");
@@ -1004,7 +1004,7 @@ container.insertBefore(newH2, paragrafo);
 
 ### after e before
 
-Permite inserir elementos antes ou depois de um nó no DOM.
+- Permite inserir elementos antes ou depois de um nó no DOM.
 
 ```javascript
 const container = document.querySelector(".container");

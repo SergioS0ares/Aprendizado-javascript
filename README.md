@@ -915,8 +915,8 @@ li[2].remove(); // Remove o terceiro item da lista
   const h1 = document.querySelector("h1");
   console.log(h1.className); // Exibe todas as classes aplicadas
   ```
----
-## Pai (parentElement e parentNode)
+
+### Pai (parentElement e parentNode)
 
 Permite acessar o elemento pai de um nó no DOM.
 
@@ -926,9 +926,7 @@ console.log(body.parentElement); // Retorna o elemento pai
 console.log(body.parentNode); // Retorna o nó pai
 ```
 
----
-
-## Filhos (children, childNodes)
+### Filhos (children, childNodes)
 
 Permite acessar os elementos filhos de um nó no DOM.
 
@@ -938,9 +936,7 @@ console.log(container.children); // Retorna os elementos filhos (HTMLCollection)
 console.log(container.childNodes); // Retorna todos os nós filhos (NodeList)
 ```
 
----
-
-## Filhos (firstChild, firstElementChild)
+### Filhos (firstChild, firstElementChild)
 
 Acessa o primeiro filho de um elemento.
 
@@ -950,9 +946,7 @@ console.log(p.firstChild); // Pode ser um texto ou espaço
 console.log(p.firstElementChild); // Retorna o primeiro elemento filho
 ```
 
----
-
-## Filhos (lastChild, lastElementChild)
+### Filhos (lastChild, lastElementChild)
 
 Acessa o último filho de um elemento.
 
@@ -962,9 +956,7 @@ console.log(p.lastChild); // Último nó filho (pode ser um texto)
 console.log(p.lastElementChild); // Último elemento filho
 ```
 
----
-
-##  Irmãos (nextSibling, nextElementSibling)
+###  Irmãos (nextSibling, nextElementSibling)
 
 Acessa o próximo elemento irmão no DOM.
 
@@ -974,9 +966,7 @@ console.log(p.nextSibling); // Próximo nó irmão
 console.log(p.nextElementSibling); // Próximo elemento irmão
 ```
 
----
-
-## Irmãos (previousSibling, previousElementSibling)
+### Irmãos (previousSibling, previousElementSibling)
 
 Acessa o elemento irmão anterior no DOM.
 
@@ -986,9 +976,7 @@ console.log(body.previousSibling); // Nó anterior
 console.log(body.previousElementSibling); // Elemento irmão anterior
 ```
 
----
-
-## append e appendChild
+### append e appendChild
 
 Adiciona elementos ao DOM. `append` pode adicionar múltiplos nós, enquanto `appendChild` adiciona apenas um nó.
 
@@ -1001,9 +989,7 @@ container.append("Texto adicionado", newDiv);
 container.appendChild(newDiv);
 ```
 
----
-
-## insertBefore
+### insertBefore
 
 Insere um elemento antes de um nó específico no DOM.
 
@@ -1016,9 +1002,7 @@ newH2.innerText = "Novo H2";
 container.insertBefore(newH2, paragrafo);
 ```
 
----
-
-## after e before
+### after e before
 
 Permite inserir elementos antes ou depois de um nó no DOM.
 

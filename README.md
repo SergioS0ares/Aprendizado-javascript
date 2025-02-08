@@ -48,6 +48,11 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 42. [Some](#some)
 43. [Reduce](#reduce)
 44. [DOM](#dom)
+45. [Manipulação de Estilos e Classes no DOM](#manipulação-de-estilos-e-classes-no-dom)
+46. [Manipulação de Estilos Inline (style)](#manipulação-de-estilos-inline-style)
+47. [Manipulação de Classes com classList](#manipulação-de-classes-com-classlist)
+48. [Uso do className para acessar classes](#uso-do-classname-para-acessar-classes)
+
 
 ---
 
@@ -872,6 +877,8 @@ h1.remove(); // Remove o título
 const li = document.querySelectorAll("li");
 li[2].remove(); // Remove o terceiro item da lista
 ```
+---
+
 ### Manipulação de Estilos e Classes no DOM
 - **Manipulação de Estilos Inline (`style`)**  
   Permite alterar diretamente os estilos de um elemento HTML via JavaScript.
@@ -900,4 +907,4 @@ li[2].remove(); // Remove o terceiro item da lista
   const h1 = document.querySelector("h1");
   console.log(h1.className); // Exibe todas as classes aplicadas
   ```
-
+---

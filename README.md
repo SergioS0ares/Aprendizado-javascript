@@ -61,6 +61,13 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 55. [append e appendChild](#append-e-appendChild)
 56. [insertBefore](#insertBefore)
 57. [after e before](#after-e-before)
+58. [Atributos do Manipulador de Eventos HTML](#atributos-do-manipulador-de-eventos-html)
+59. [Manipuladores de Eventos DOM Nível 0](#manipuladores-de-eventos-dom-nível-0)
+60. [Manipuladores de Eventos DOM Nível 2](#manipuladores-de-eventos-dom-nível-2)
+61. [Removendo Manipuladores de Eventos](#removendo-manipuladores-de-eventos)
+62. [Preventing Default](#preventing-default)
+63. [Event Delegation](#event-delegation)
+64. [Validando Eventos](#validando-eventos)
  
 ---
 
@@ -1013,6 +1020,144 @@ newP.innerText = "Texto adicionado";
 
 container.before(newP); // Adiciona antes do container
 // container.after(newP); // Adicionaria depois do container
+```
+
+## 1️⃣ Atributos do Manipulador de Eventos HTML
+
+Definição de eventos diretamente no HTML utilizando o atributo `onclick`.
+
+```html
+<button onclick="acionarAlert('Alerta maroto!')">Acionar alert</button>
+```
+
+```javascript
+"use strict";
+const acionarAlert = (value) => {
+  alert(value);
+};
+```
+
+---
+
+## 2️⃣ Manipuladores de Eventos DOM Nível 0
+
+Atribuindo eventos diretamente a um elemento com `onclick`. O último evento sobrescreve o anterior.
+
+```javascript
+const btn = document.querySelector("button");
+btn.onclick = function alertOne() {
+  alert(123);
+};
+btn.onclick = function alertTwo() {
+  alert(456);
+};
+```
+
+---
+
+## 3️⃣ Manipuladores de Eventos DOM Nível 2
+
+Utilizando `addEventListener` para adicionar múltiplos eventos a um elemento.
+
+```javascript
+const btn = document.querySelector("button");
+const body = document.querySelector("body");
+
+btn.addEventListener("click", () => {
+  body.style.background = "red";
+});
+
+btn.addEventListener("mouseleave", () => {
+  body.style.background = "#FFF";
+});
+```
+
+---
+
+## 4️⃣ Removendo Manipuladores de Eventos
+
+Removendo eventos usando `removeEventListener`.
+
+```javascript
+const btn = document.querySelector("button");
+
+const acionarAlert = () => {
+  alert(123);
+  btn.removeEventListener("click", acionarAlert);
+};
+
+btn.addEventListener("click", acionarAlert);
+```
+
+---
+
+## 5️⃣ Preventing Default
+
+Impede o comportamento padrão de elementos, como a navegação de links.
+
+```javascript
+const link = document.querySelector("a");
+
+link.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("Evento prevenido");
+});
+```
+
+---
+
+## 6️⃣ Event Delegation
+
+Captura eventos em elementos filhos sem adicionar múltiplos listeners.
+
+```javascript
+const menu = document.querySelector("#menu");
+
+menu.addEventListener("click", (event) => {
+  const { target } = event;
+  const body = document.querySelector("body");
+
+  switch (target.getAttribute("class")) {
+    case "home":
+      body.style.background = "blue";
+      break;
+    case "sobre":
+      body.style.background = "red";
+      break;
+    case "contato":
+      body.style.background = "#fff";
+      break;
+  }
+});
+```
+
+---
+
+## 7️⃣ Validando Eventos
+
+Garante que o elemento existe antes de adicionar um evento.
+
+```javascript
+const menu = document.querySelector("#menu");
+
+if (menu) {
+  menu.addEventListener("click", (event) => {
+    const { target } = event;
+    const body = document.querySelector("body");
+
+    switch (target.getAttribute("class")) {
+      case "home":
+        body.style.background = "blue";
+        break;
+      case "sobre":
+        body.style.background = "red";
+        break;
+      case "contato":
+        body.style.background = "#fff";
+        break;
+    }
+  });
+}
 ```
 
 ---

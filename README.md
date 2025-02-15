@@ -68,6 +68,11 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 62. [Preventing Default](#preventing-default)
 63. [Event Delegation](#event-delegation)
 64. [Validando Eventos](#validando-eventos)
+1. [Acessando os Formulários](#acessando-os-formulários)
+2. [Submetendo Formulário + FormData](#submetendo-formulário--formdata)
+3. [Manipulando Input](#manipulando-input)
+4. [Manipulando Radio Button](#manipulando-radio-button)
+5. [Manipulando Checkbox](#manipulando-checkbox)
  
 ---
 
@@ -1146,6 +1151,134 @@ if (menu) {
     }
   });
 }
+```
+
+## Acessando os Formulários
+
+Podemos acessar um formulário no DOM utilizando `document.forms.namedItem()`, permitindo capturar seus valores e manipular eventos.
+
+```javascript
+"use strict";
+
+const form = document.forms.namedItem("registration");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const name = form.name.value;
+  const password = form.password.value;
+
+  console.log(name, password);
+});
+```
+
+---
+
+## Submetendo Formulário + FormData
+
+A API `FormData` facilita a manipulação dos dados de um formulário antes de enviá-los.
+
+```javascript
+"use strict";
+
+const form = document.forms.namedItem("registration");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formData = new FormData(form);
+
+  formData.set("name", form.name.value);
+  formData.set("password", form.password.value);
+
+  console.log(formData.get("name"));
+  console.log(formData.get("password"));
+
+  formData.delete("name");
+  console.log(formData.has("name"));
+});
+```
+
+---
+
+## Manipulando Input
+
+Podemos capturar o evento `input` para processar os dados conforme o usuário digita.
+
+```javascript
+"use strict";
+
+const form = document.forms.namedItem("registration");
+
+form.addEventListener("input", (event) => {
+  event.preventDefault();
+  const name = form.name.value;
+
+  const newDivElement = document.createElement("div");
+  newDivElement.innerText = name.toUpperCase();
+
+  form.nextElementSibling?.remove();
+  form.after(newDivElement);
+});
+```
+
+---
+
+## Manipulando Radio Button
+
+Os botões de rádio permitem a escolha de uma única opção. Podemos capturar sua seleção e alterar elementos na página.
+
+```javascript
+"use strict";
+
+const form = document.forms.namedItem("select-radio");
+const submit = document.querySelector("#submit");
+const change = document.querySelector("#change");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  submit.innerHTML = form.radio.value;
+});
+
+form.radio.forEach((res) => {
+  res.addEventListener("change", (event) => {
+    change.innerHTML = event.target.value;
+  });
+});
+```
+
+---
+
+## Manipulando Checkbox
+
+Os checkboxes permitem selecionar múltiplos valores. Podemos armazenar os selecionados em um array.
+
+```javascript
+"use strict";
+
+const form = document.forms.namedItem("select-checkbox");
+const submit = document.querySelector("#submit");
+const change = document.querySelector("#change");
+
+let checkedValues = [];
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  submit.innerHTML = checkedValues;
+});
+
+form.checkbox.forEach((element) => {
+  element.addEventListener("change", (event) => {
+    handleChecked(event, element);
+    change.innerHTML = checkedValues;
+  });
+});
+
+const handleChecked = (event, element) => {
+  if (event.target.checked) {
+    checkedValues.push(element.value);
+  } else {
+    checkedValues = checkedValues.filter(value => value !== element.value);
+  }
+};
 ```
 
 ---

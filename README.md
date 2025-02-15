@@ -1022,9 +1022,9 @@ container.before(newP); // Adiciona antes do container
 // container.after(newP); // Adicionaria depois do container
 ```
 
-## 1️⃣ Atributos do Manipulador de Eventos HTML
+### Atributos do Manipulador de Eventos HTML
 
-Definição de eventos diretamente no HTML utilizando o atributo `onclick`.
+- Definição de eventos diretamente no HTML utilizando o atributo `onclick`.
 
 ```html
 <button onclick="acionarAlert('Alerta maroto!')">Acionar alert</button>
@@ -1037,11 +1037,9 @@ const acionarAlert = (value) => {
 };
 ```
 
----
+### Manipuladores de Eventos DOM Nível 0
 
-## 2️⃣ Manipuladores de Eventos DOM Nível 0
-
-Atribuindo eventos diretamente a um elemento com `onclick`. O último evento sobrescreve o anterior.
+- Atribuindo eventos diretamente a um elemento com `onclick`. O último evento sobrescreve o anterior.
 
 ```javascript
 const btn = document.querySelector("button");
@@ -1053,11 +1051,9 @@ btn.onclick = function alertTwo() {
 };
 ```
 
----
+### Manipuladores de Eventos DOM Nível 2
 
-## 3️⃣ Manipuladores de Eventos DOM Nível 2
-
-Utilizando `addEventListener` para adicionar múltiplos eventos a um elemento.
+- Utilizando `addEventListener` para adicionar múltiplos eventos a um elemento.
 
 ```javascript
 const btn = document.querySelector("button");
@@ -1072,11 +1068,9 @@ btn.addEventListener("mouseleave", () => {
 });
 ```
 
----
+### Removendo Manipuladores de Eventos
 
-## 4️⃣ Removendo Manipuladores de Eventos
-
-Removendo eventos usando `removeEventListener`.
+- Removendo eventos usando `removeEventListener`.
 
 ```javascript
 const btn = document.querySelector("button");
@@ -1089,11 +1083,9 @@ const acionarAlert = () => {
 btn.addEventListener("click", acionarAlert);
 ```
 
----
+### Preventing Default
 
-## 5️⃣ Preventing Default
-
-Impede o comportamento padrão de elementos, como a navegação de links.
+- Impede o comportamento padrão de elementos, como a navegação de links.
 
 ```javascript
 const link = document.querySelector("a");
@@ -1104,11 +1096,9 @@ link.addEventListener("click", (event) => {
 });
 ```
 
----
+### Event Delegation
 
-## 6️⃣ Event Delegation
-
-Captura eventos em elementos filhos sem adicionar múltiplos listeners.
+- Captura eventos em elementos filhos sem adicionar múltiplos listeners.
 
 ```javascript
 const menu = document.querySelector("#menu");
@@ -1131,11 +1121,9 @@ menu.addEventListener("click", (event) => {
 });
 ```
 
----
+### Validando Eventos
 
-## 7️⃣ Validando Eventos
-
-Garante que o elemento existe antes de adicionar um evento.
+- Garante que o elemento existe antes de adicionar um evento.
 
 ```javascript
 const menu = document.querySelector("#menu");

@@ -1153,9 +1153,9 @@ if (menu) {
 }
 ```
 
-## Acessando os Formulários
+### Acessando os Formulários
 
-Podemos acessar um formulário no DOM utilizando `document.forms.namedItem()`, permitindo capturar seus valores e manipular eventos.
+- Podemos acessar um formulário no DOM utilizando `document.forms.namedItem()`, permitindo capturar seus valores e manipular eventos.
 
 ```javascript
 "use strict";
@@ -1171,11 +1171,9 @@ form.addEventListener("submit", (event) => {
 });
 ```
 
----
+### Submetendo Formulário + FormData
 
-## Submetendo Formulário + FormData
-
-A API `FormData` facilita a manipulação dos dados de um formulário antes de enviá-los.
+- A API `FormData` facilita a manipulação dos dados de um formulário antes de enviá-los.
 
 ```javascript
 "use strict";
@@ -1197,11 +1195,9 @@ form.addEventListener("submit", (event) => {
 });
 ```
 
----
+### Manipulando Input
 
-## Manipulando Input
-
-Podemos capturar o evento `input` para processar os dados conforme o usuário digita.
+- Podemos capturar o evento `input` para processar os dados conforme o usuário digita.
 
 ```javascript
 "use strict";
@@ -1220,11 +1216,9 @@ form.addEventListener("input", (event) => {
 });
 ```
 
----
+### Manipulando Radio Button
 
-## Manipulando Radio Button
-
-Os botões de rádio permitem a escolha de uma única opção. Podemos capturar sua seleção e alterar elementos na página.
+- Os botões de rádio permitem a escolha de uma única opção. Podemos capturar sua seleção e alterar elementos na página.
 
 ```javascript
 "use strict";
@@ -1245,11 +1239,9 @@ form.radio.forEach((res) => {
 });
 ```
 
----
+### Manipulando Checkbox
 
-## Manipulando Checkbox
-
-Os checkboxes permitem selecionar múltiplos valores. Podemos armazenar os selecionados em um array.
+- Os checkboxes permitem selecionar múltiplos valores. Podemos armazenar os selecionados em um array.
 
 ```javascript
 "use strict";

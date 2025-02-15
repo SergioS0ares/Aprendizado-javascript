@@ -4,15 +4,24 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 
 # Sumário
 
+### 🔹 Tipos Primitivos
 1. [Introdução ao JavaScript](#introdução-ao-javascript)
 2. [Strings](#strings)
 3. [Tipos Primitivos](#tipos-primitivos)
+
+### 🔹 Operadores Aritméticos
 4. [Operações Matemáticas e Concatenação](#operações-matemáticas-e-concatenação)
+
+### 🔹 Variáveis
 5. [Declaração de Variáveis e Escopo](#declaração-de-variáveis-e-escopo)
+
+### 🔹 Condicionais
 6. [Estruturas Condicionais](#estruturas-condicionais)
 7. [Falsy vs Truthy](#falsy-vs-truthy)
 8. [Operador Ternário](#operador-ternário)
 9. [Switch e Casos de Uso](#switch-e-casos-de-uso)
+
+### 🔹 Funções
 10. [Funções](#funções)
 11. [Arrow Functions](#arrow-functions)
 12. [IIFE - Expressão de Função Invocada Imediatamente](#iife---expressão-de-função-invocada-imediatamente)
@@ -20,15 +29,19 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 14. [Closures](#closures)
 15. [Housing](#housing)
 16. [Arguments](#arguments)
-17. [O que é um Objeto](#o-que-é-um-objeto)  
-18. [Propriedades, Métodos e Valores Curtos](#propriedades-métodos-e-valores-curtos)  
-19. [Acessando Valores do Objeto](#acessando-valores-do-objeto)  
-20. [Destructuring](#destructuring)  
-21. [Verificando a Existência de Propriedades](#verificando-a-existência-de-propriedades)  
-22. [Adicionando e Atualizando Propriedades no Objeto](#adicionando-e-atualizando-propriedades-no-objeto)  
-23. [Removendo a Propriedade do Objeto](#removendo-a-propriedade-do-objeto)  
-24. [Mesclando e Clonando Objetos](#mesclando-e-clonando-objetos)  
+
+### 🔹 Objetos
+17. [O que é um Objeto](#o-que-é-um-objeto)
+18. [Propriedades, Métodos e Valores Curtos](#propriedades-métodos-e-valores-curtos)
+19. [Acessando Valores do Objeto](#acessando-valores-do-objeto)
+20. [Destructuring](#destructuring)
+21. [Verificando a Existência de Propriedades](#verificando-a-existência-de-propriedades)
+22. [Adicionando e Atualizando Propriedades no Objeto](#adicionando-e-atualizando-propriedades-no-objeto)
+23. [Removendo a Propriedade do Objeto](#removendo-a-propriedade-do-objeto)
+24. [Mesclando e Clonando Objetos](#mesclando-e-clonando-objetos)
 25. [Clonagem de Objetos Rasos e Profundos](#clonagem-de-objetos-rasos-e-profundos)
+
+### 🔹 Arrays
 26. [O que é um Array](#o-que-é-um-array)
 27. [Índices e Elementos](#índices-e-elementos)
 28. [Matrizes Multidimensionais](#matrizes-multidimensionais)
@@ -47,6 +60,8 @@ Este repositório contém meus estudos e experimentos em JavaScript, incluindo c
 41. [Every](#every)
 42. [Some](#some)
 43. [Reduce](#reduce)
+
+### 🔹 DOM
 44. [DOM](#dom)
 45. [Manipulação de Estilos e Classes no DOM](#manipulação-de-estilos-e-classes-no-dom)
 46. [Manipulação de Estilos Inline (style)](#manipulação-de-estilos-inline-style)
